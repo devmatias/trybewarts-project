@@ -80,7 +80,7 @@
                 <section id="section-rate">
                     <label id="label-rate">Como você avalia a Trybewarts?</label>
                     <div>
-                        <input type="radio" name="rate" value="1" required> 1
+                        <input type="radio" name="rate" value="1" checked> 1
                         <input type="radio" name="rate" value="2"> 2
                         <input type="radio" name="rate" value="3"> 3
                         <input type="radio" name="rate" value="4"> 4
@@ -102,6 +102,36 @@
                     <label id="label-infos">Você concorda com o uso das informações acima?</label>
                     <input type="checkbox" id="agreement">
                 </section>
+                <section>
+                    <span role="alert" id="first-name-error" class="hidden-error">
+                        Campo Nome está inválido, preencha seu primeiro nome!
+                    </span>
+                    <span role="alert" id="last-name-error" class="hidden-error">
+                        Campo Sobrenome está inválido, preencha seu sobrenome!
+                    </span>
+                    <span role="alert" id="email-error" class="hidden-error">
+                        Campo Email está inválido, preencha seu email!
+                    </span>
+                    <span role="alert" id="house-error" class="hidden-error">
+                        Campo Casa está inválido, preencha sua casa corretamente!
+                    </span>
+                    <span role="alert" id="family-error" class="hidden-error">
+                        Campo Família está inválido, preencha sua família corretamente!
+                    </span>
+                    <span role="alert" id="subjects-error" class="hidden-error">
+                        Campo Matérias está inválido, preencha com ao menos 1 matéria!
+                    </span>
+                    <span role="alert" id="avaliation-error" class="hidden-error">
+                        Campo Avaliação está inválido, preencha sua nota!
+                    </span>
+                    <span role="alert" id="observation-error" class="hidden-error">
+                        Campo Observações está inválido, preencha o campo com suas observações!
+                    </span>
+                    <span role="alert" id="agreement-error" class="hidden-error">
+                        Uso das informações deve ser obrigatório para enviar o formulário!
+                    </span>
+                </section>
+
                 <button type="submit" id="submit-btn">Enviar</button>
             </div>
         </form>

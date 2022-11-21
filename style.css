@@ -17,7 +17,8 @@ body {
   color: white;
 }
 
-#senha , #email {
+#senha,
+#email {
   height: 30px;
   width: 200px;
   border-radius: 3px;
@@ -191,11 +192,20 @@ footer {
   color: rgb(153, 151, 151);
 }
 
+.hidden-error {
+  display: none;
+}
+
+.visible {
+  display: block;
+  color: red;
+}
+
 /* RESPONSIVIDADE */
 
-@media screen and ( max-width : 1210px ) {
-
-  header , .trybewarts-login {
+@media screen and (max-width: 1210px) {
+  header,
+  .trybewarts-login {
     flex-direction: colum;
     text-align: center;
   }

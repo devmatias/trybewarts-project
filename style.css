@@ -192,13 +192,21 @@ footer {
   color: rgb(153, 151, 151);
 }
 
+.error-container {
+  display: none;
+  border: 1.5px solid red;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .hidden-error {
   display: none;
 }
 
+
 .visible {
   display: block;
-  color: red;
+  color: rgb(143, 71, 71);
 }
 
 /* RESPONSIVIDADE */

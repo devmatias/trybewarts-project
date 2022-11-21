@@ -17,6 +17,7 @@ const getSubjectsError = document.getElementById("subjects-error");
 const getAvaliationError = document.getElementById("avaliation-error");
 const getObservationError = document.getElementById("observation-error");
 const getAgreementError = document.getElementById("agreement-error");
+const getErrorContainer = document.querySelector(".error-container");
 let validationArray = [];
 let dataArray = [];
 
@@ -89,6 +90,7 @@ const showData = () => {
     validateAllInputs();
     for (let validation of validationArray) {
       if (!validation) {
+        getErrorContainer.style.display = 'block';
         validationArray = [];
         return;
       }

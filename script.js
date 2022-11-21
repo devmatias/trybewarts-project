@@ -125,10 +125,44 @@ const checkAgreementButton = () => {
 
 checkAgreementButton();
 
+const filterBox = (group) => {
+  for (let item of group) {
+    if (item.checked) {
+      console.log(item);
+      return false;
+    }
+  }
+  return true;
+};
 
-function validate(input, error) {
+const changeInputType = (type, input) => {
+  switch (type) {
+    case "text":
+      return !input.value || input.value.length > 50;
+      break;
+    case "email":
+      return (
+        !input.value || !input.value.includes("@") || input.value.length > 50
+      );
+      break;
+    case "select":
+      return input.value === "Escolha uma casa";
+      break;
+    case "checkbox":
+    case "radio":
+      return filterBox(input);
+      break;
+    case "textarea":
+      return !input.value || input.value.length > 500;
+      break;
+    default:
+      return console.log("type inválido");
+  }
+};
+
+function validate(type, input, error) {
   let valid = true;
-  if (!input.value) {
+  if (changeInputType(type, input)) {
     error.classList.add("visible");
     error.classList.remove("hidden-error");
     valid = false;
@@ -139,32 +173,20 @@ function validate(input, error) {
   return valid;
 }
 
-const filterCheckbox = () => {
-  const checkboxArray = []
-  const getSubjects = document.querySelectorAll(".subject");
-  for (let subject of getSubjects) {
-    if (subject.checked) {
-      return subject;
-    } else {
-      checkboxArray.push('')
-    }
-  }
-  console.log(checkboxArray)
-  return checkboxArray[0];
-  
-}
-
 const validateAllInputs = () => {
-  const getFamily = document.querySelector('input[name="family"]:checked');
-  const getAvaliation = document.querySelector('input[name="rate"]:checked');
+  const getFamily = document.querySelectorAll('input[name="family"]');
+  const getSubjects = document.querySelectorAll(".subject");
+  const getAvaliation = document.querySelectorAll('input[name="rate"]');
   const getObservations = document.querySelector("#textarea");
-  validationArray.push(validate(getFirstName, getFirstNameError));
-  validationArray.push(validate(getLastName, getLastNameError));
-  validationArray.push(validate(getEmail, getEmailError));
-  validationArray.push(validate(getHouse, getHouseError));
-  validationArray.push(validate(getFamily, getFamilyError));
-  validationArray.push(validate(filterCheckbox(), getSubjectsError));
-  validationArray.push(validate(getAvaliation, getAvaliationError));
-  validationArray.push(validate(getObservations, getObservationError));
+  validationArray.push(validate("text", getFirstName, getFirstNameError));
+  validationArray.push(validate("text", getLastName, getLastNameError));
+  validationArray.push(validate("email", getEmail, getEmailError));
+  validationArray.push(validate("select", getHouse, getHouseError));
+  validationArray.push(validate("radio", getFamily, getFamilyError));
+  validationArray.push(validate("checkbox", getSubjects, getSubjectsError));
+  validationArray.push(validate("radio", getAvaliation, getAvaliationError));
+  validationArray.push(
+    validate("textarea", getObservations, getObservationError)
+  );
   console.log(validationArray);
 };

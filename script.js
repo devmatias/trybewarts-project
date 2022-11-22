@@ -117,7 +117,7 @@ const checkAgreementButton = () => {
   agreement.addEventListener("click", () => {
     if (agreement.checked) {
       getSubmitButton.disabled = false;
-      getSubmitButton.style.background = "purple";
+      getSubmitButton.style.background = "";
     } else {
       getSubmitButton.style.background = "gray";
       getSubmitButton.disabled = true;

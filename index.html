@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -22,11 +25,13 @@
         <img src="images/trybewarts-header-logo.svg" alt="Trybewarts logo" class="trybewarts-header-logo">
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form class="trybewarts-login">
-            <div>
-                <input type="email" name="email" placeholder="Email" id="email">
+            <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <label for="email">Email</label>
             </div>
-            <div>
-                <input type="password" name="password" placeholder="Senha" id="senha">
+            <div class="form-floating">
+                <input type="password" class="form-control" id="senha" placeholder="Password" required>
+                <label for="senha">Password</label>
             </div>
             <div>
                 <button class="btn btn-success" id="login-button">Entrar</button>
@@ -74,63 +79,64 @@
                 <section id="family-section">
 
                     <label for="" id="label-family">Qual sua família?</label>
-                    <label for="frontend">
-                        <input type="radio" name="family" value="Frontend" id="frontend"> Família Frontend
-                    </label>
-                    <label for="backend">
-                        <input type="radio" name="family" value="Backend" id="backend"> Família Backend
-                    </label>
-                    <label for="fullstack">
-                        <input type="radio" name="family" value="FullStack" id="fullstack"> Família FullStack
-                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="family" id="frontend"
+                            value="Família Frontend">
+                        <label class="form-check-label" for="frontend">
+                            Família Frontend
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="family" value="Família Backend" id="backend">
+                        <label class="form-check-label" for="backend">
+                            Família Backend
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="family" value="Família FullStack"
+                            id="fullstack">
+                        <label class="form-check-label" for="fullstack">
+                            Família FullStack
+                        </label>
+                    </div>
                 </section>
                 <!-- Requisito 13, seção conteúdo  -->
                 <section id="tech-section">
                     <div id="techs">
                         <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" class="subject" value="HoFs"
-                                id="flexCheckDefaul1t">
-                            <label class="form-check-label" for="flexCheckDefault1">
+                            <input class="form-check-input subject" type="checkbox" value="HoFs" id="hofs">
+                            <label class="form-check-label" for="hofs">
                                 HoFs
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" class="subject" value="Jest"
-                                id="flexCheckDefault2">
-                            <label class="form-check-label" for="flexCheckDefault2">
+                            <input class="form-check-input subject" type="checkbox" value="Jest" id="jest">
+                            <label class="form-check-label" for="jest">
                                 Jest
                             </label>
                         </div>
                         <div class="form-check">
-
-                            <input class="form-check-input" type="checkbox" class="subject" value="Promises"
-                                id="flexCheckDefault3">
-                            <label class="form-check-label" for="flexCheckDefault3">
+                            <input class="form-check-input subject" type="checkbox" value="Promises" id="promises">
+                            <label class="form-check-label" for="promises">
                                 Promises
                             </label>
                         </div>
                         <div class="form-check">
-
-                            <input class="form-check-input" type="checkbox" class="subject" value="React"
-                                id="flexCheckDefault4">
-                            <label class="form-check-label" for="flexCheckDefault4">
+                            <input class="form-check-input subject" type="checkbox" value="React" id="react">
+                            <label class="form-check-label" for="react">
                                 React
                             </label>
                         </div>
                         <div class="form-check">
-
-                            <input class="form-check-input" type="checkbox" class="subject" value="SQL"
-                                id="flexCheckDefault5">
-                            <label class="form-check-label" for="flexCheckDefault5">
+                            <input class="form-check-input subject" type="checkbox" value="SQL" id="sql">
+                            <label class="form-check-label" for="sql">
                                 SQL
                             </label>
                         </div>
                         <div class="form-check">
-
-                            <input class="form-check-input" type="checkbox" class="subject" value="Python"
-                                id="flexCheckDefault6">
-                            <label class="form-check-label" for="flexCheckDefault6">
+                            <input class="form-check-input subject" type="checkbox" value="Python" id="python">
+                            <label class="form-check-label" for="python">
                                 Python
                             </label>
                         </div>
@@ -142,29 +148,55 @@
                 <section id="section-rate">
                     <label id="label-rate">Como você avalia a Trybewarts?</label>
                     <div>
-                        <input type="radio" name="rate" value="1"> 1
-                        <input type="radio" name="rate" value="2"> 2
-                        <input type="radio" name="rate" value="3"> 3
-                        <input type="radio" name="rate" value="4"> 4
-                        <input type="radio" name="rate" value="5"> 5
-                        <input type="radio" name="rate" value="6"> 6
-                        <input type="radio" name="rate" value="7"> 7
-                        <input type="radio" name="rate" value="8"> 8
-                        <input type="radio" name="rate" value="9"> 9
-                        <input type="radio" name="rate" value="10"> 10
+                        <input class="form-check-input" type="radio" name="rate" value="1" id="radio1">
+                        <label class="form-check-label" for="radio1">
+                            1
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="2" id="radio2">
+                        <label class="form-check-label" for="radio2">
+                            2
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="3" id="radio3">
+                        <label class="form-check-label" for="radio3">
+                            3
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="4" id="radio4">
+                        <label class="form-check-label" for="radio4">
+                            4
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="5" id="radio5">
+                        <label class="form-check-label" for="radio5">
+                            5
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="6" id="radio6">
+                        <label class="form-check-label" for="radio6">
+                            6
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="7" id="radio7">
+                        <label class="form-check-label" for="radio7">
+                            7
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="8" id="radio8">
+                        <label class="form-check-label" for="radio8">
+                            8
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="9" id="radio9">
+                        <label class="form-check-label" for="radio9">
+                            9
+                        </label>
+                        <input class="form-check-input" type="radio" name="rate" value="10" id="radio10">
+                        <label class="form-check-label" for="radio10">
+                            10
+                        </label>
                     </div>
                 </section>
                 <section id="section-comments">
                     <div class="form-floating">
                         <textarea class="form-control" maxlength="500" cols="30" rows="10"
                             placeholder="Leave a comment here" id="textarea" style="height: 100px"></textarea>
-                        <label for="textarea" class="textarea">Comments</label>
+                        <label for="textarea" class="textarea">Comentários</label>
                     </div>
                     <span id="counter">500/500</span>
-                </section>
-                <section id="confirm-info">
-                    <label id="label-infos">Você concorda com o uso das informações acima?</label>
-                    <input type="checkbox" id="agreement">
                 </section>
                 <section class="error-container">
                     <span role="alert" id="first-name-error" class="hidden-error">
@@ -193,13 +225,18 @@
                         Verifique o campo Observações, ele não deve estar vazio ou possuir mais de 500 caracteres!
                     </span>
                 </section>
-
+                <section id="confirm-info">
+                    <label class="form-check-label" id="label-infos" for="agreement">
+                        Você concorda com o uso das informações acima?
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="agreement" id="agreement">
+                </section>
                 <button class="btn btn-success" type="submit" id="submit-btn">Enviar</button>
             </div>
         </form>
-        <div>
+        <section id="section-logo">
             <img src="images/trybewarts-colored.svg" alt="logo Trybewarts" id="trybewarts-forms-logo">
-        </div>
+        </section>
     </main>
     <footer>
         <p>Direitos reservados à Trybewarts©</p>

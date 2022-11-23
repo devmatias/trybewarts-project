@@ -2,10 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Caveat", cursive;
+  font-size: large;
 }
 
 body {
-  background-color: rgb(230, 230, 230) !important;
+  background-image: url(https://ladiversiva.com/wp-content/uploads/2021/01/Visita-Hogwarts-online-y-gratis-en-la-gran-semana-de-Harry-Potter.jpg);
+  background-size: cover;
+  min-height: 100%;
+  position: relative;
+  height: 100%;
+  padding-bottom: 100px;
 }
 
 .header {
@@ -13,21 +20,22 @@ body {
   background-color: rgb(50, 167, 145);
   align-items: center;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 1rem 25px;
   color: white;
 }
 
 #senha,
 #email {
-  width: 90%;
-  border-radius: 5px;
   border: none;
-  padding: 10px;
 }
 
 .trybewarts-login {
   display: flex;
-  width: 40%;
+  width: 50%;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  color: black;
 }
 
 #login-button {
@@ -44,6 +52,8 @@ main {
   display: flex;
   margin: 40px 5% 0;
   justify-content: space-between;
+  align-items: center;
+
 }
 
 hr {
@@ -55,13 +65,16 @@ hr {
   display: flex;
   width: 675px;
   flex-flow: column wrap;
+  background-color: rgb(230, 230, 230);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 #evaluation-form h1 {
   text-align: center;
   margin-bottom: 20px;
 }
-
 
 #name-section {
   display: flex;
@@ -82,7 +95,7 @@ hr {
   gap: 10px;
 }
 
-#info-house div  {
+#info-house div {
   width: 50%;
   margin: 0 !important;
 }
@@ -96,19 +109,13 @@ hr {
   background-color: white;
 }
 
-.mid-container section div {
-}
-
 #family-section {
   display: flex;
   flex-flow: column wrap;
   align-content: flex-start;
-  margin: 16px 0;
+  margin: 2px 0;
+  font-size: 1em;
   width: 40%;
-}
-
-#family-section label {
-  margin: 5px 0;
 }
 
 /* alterações do fer abaixo */
@@ -119,21 +126,20 @@ hr {
 .mid-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-
 #techs {
-  font-size: 1.2em;
+  font-size: 1em;
   display: flex;
-  flex-flow: row wrap ;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 
 .form-check {
   display: flex !important;
   align-items: center !important;
-  padding: 10px!important;
+  padding: 10px !important;
   gap: 10px;
   min-width: 130px;
 }
@@ -160,12 +166,15 @@ hr {
   flex-flow: column;
 }
 
-#avaliation section {
-  margin-bottom: 1em;
-}
-
 #textarea {
   height: calc(10rem + 2px) !important;
+  border: none;
+}
+
+#confirm-info {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 10px;
 }
 
 #submit-btn {
@@ -188,8 +197,15 @@ hr {
 }
 
 /* alterações do fer acima */
+#section-logo {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 10;
+}
+
 #trybewarts-forms-logo {
-  height: 500px;
+  width: 80%;
+  flex-basis: 30%;
 }
 
 footer {
@@ -197,6 +213,10 @@ footer {
   background-color: rgb(8, 9, 9);
   padding: 5px;
   color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 #counter {
@@ -212,15 +232,41 @@ footer {
   border: 1.5px solid red;
   border-radius: 10px;
   padding: 10px;
+  margin-bottom: 1rem;
 }
 
 .hidden-error {
   display: none;
 }
 
-
 .visible {
   display: block;
   color: rgb(143, 71, 71);
 }
 
+@media screen and (max-width:576px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .trybewarts-login {
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  main {
+    flex-direction: column;
+  }
+
+  #section-logo {
+    justify-content: center;
+  }
+
+  #evaluation-form {
+    width: 100%;
+  }
+
+  #form-data {
+    width: 100%;
+  }
+}

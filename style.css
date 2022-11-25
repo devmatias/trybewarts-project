@@ -65,7 +65,8 @@
   main {
     display: flex;
     margin: 40px 5%;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     gap: 10%;
   }
@@ -333,6 +334,7 @@
 @media screen and (min-width: 768px) {
   .header {
     flex-direction: row;
+    justify-content: space-between;
     gap: 20px;
   }
 
@@ -359,7 +361,6 @@
 
   #evaluation-form {
     width: 675px;
-
   }
 
   #label-rate {
@@ -384,6 +385,5 @@
 @media screen and (min-width: 1200px) {
   main {
     flex-direction: row;
-    justify-content: space-between !important;
   }
 }

@@ -1,272 +1,389 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Caveat", cursive;
-  font-size: large;
-}
+@media screen and (min-width: 0) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+  }
 
-body {
-  background-image: url(https://ladiversiva.com/wp-content/uploads/2021/01/Visita-Hogwarts-online-y-gratis-en-la-gran-semana-de-Harry-Potter.jpg);
-  background-size: cover;
-  min-height: 100%;
-  position: relative;
-  height: 100%;
-  padding-bottom: 100px;
-}
+  body {
+    background-image: url(https://wallpapers.com/images/hd/artwork-of-hogwarts-castle-yoq14p2eqajyfkpj.webp);
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100px;
+  }
 
-.header {
-  display: flex;
-  background-color: rgb(50, 167, 145);
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 25px;
-  color: white;
-}
+  hr {
+    margin: 16px  0 !important;
+  }  
 
-#senha,
-#email {
-  border: none;
-}
-
-.trybewarts-login {
-  display: flex;
-  width: 50%;
-  gap: 10px;
-  align-items: center;
-  justify-content: flex-end;
-  color: black;
-}
-
-#login-button {
-  padding: 10px 30px;
-  border: none;
-}
-
-.trybewarts-header-logo {
-  width: 70px;
-  margin-left: 8px;
-}
-
-main {
-  display: flex;
-  margin: 40px 5% 0;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-hr {
-  width: 100%;
-}
-
-/* Requisito 5 e 6 */
-#evaluation-form {
-  display: flex;
-  width: 675px;
-  flex-flow: column wrap;
-  background-color: rgb(230, 230, 230);
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-
-#evaluation-form h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#name-section {
-  display: flex;
-  gap: 10px;
-}
-
-#name-section div {
-  width: 100%;
-}
-
-#name-section div input {
-  border: none;
-  width: 100%;
-}
-
-#info-house {
-  display: flex;
-  gap: 10px;
-}
-
-#info-house div {
-  width: 50%;
-  margin: 0 !important;
-}
-
-#info-house div input {
-  border: none;
-}
-
-#info-house select {
-  border: none;
-  background-color: white;
-}
-
-#family-section {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: flex-start;
-  margin: 2px 0;
-  font-size: 1em;
-  width: 40%;
-}
-
-/* alterações do fer abaixo */
-#tech-section {
-  width: 80%;
-}
-
-.mid-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-#techs {
-  font-size: 1em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.form-check {
-  display: flex !important;
-  align-items: center !important;
-  padding: 10px !important;
-  gap: 10px;
-  min-width: 130px;
-}
-
-.form-check input {
-  display: flex;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 !important;
-}
-
-#section-rate {
-  display: flex;
-  justify-content: space-between;
-}
-
-#section-rate input {
-  margin-left: 0.6rem;
-}
-
-#section-comments {
-  margin-top: 1rem;
-  display: flex;
-  flex-flow: column;
-}
-
-#textarea {
-  height: calc(10rem + 2px) !important;
-  border: none;
-}
-
-#confirm-info {
-  margin-bottom: 1rem;
-  display: flex;
-  gap: 10px;
-}
-
-#submit-btn {
-  margin-bottom: 1em;
-  width: 100%;
-  border-radius: 4px;
-  border: 0;
-  padding: 0.4em;
-  font-weight: 700;
-}
-
-#form-data {
-  order: -1;
-  width: 675px;
-  padding: 20px;
-}
-
-#form-data p {
-  padding: 10px 0;
-}
-
-/* alterações do fer acima */
-#section-logo {
-  display: flex;
-  justify-content: flex-end;
-  flex-shrink: 10;
-}
-
-#trybewarts-forms-logo {
-  width: 80%;
-  flex-basis: 30%;
-}
-
-footer {
-  text-align: center;
-  background-color: rgb(8, 9, 9);
-  padding: 5px;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-#counter {
-  text-align: end;
-  position: relative;
-  top: -25px;
-  right: 8px;
-  color: rgb(153, 151, 151);
-}
-
-.error-container {
-  display: none;
-  border: 1.5px solid red;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 1rem;
-}
-
-.hidden-error {
-  display: none;
-}
-
-.visible {
-  display: block;
-  color: rgb(143, 71, 71);
-}
-
-@media screen and (max-width:576px) {
   .header {
+    display: flex;
+    background-color: rgb(50, 167, 145);
     flex-direction: column;
+    padding: 1rem 25px;
+    color: white;
+  }
+
+  #trybewarts-objects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .trybewarts-header-logo {
+    width: 70px;
+    margin-left: 8px;
+  }
+
+  .trybewarts-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+  }
+
+  .trybewarts-login .form-floating{
+    width: 100%;
+  }
+
+  #senha,
+  #email {
+    border: none;
+  }
+
+  #login-button {
+    padding: 10px 30px;
+    border: none;
+  }
+
+  main {
+    display: flex;
+    margin: 40px 5%;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10%;
+  }
+
+  #evaluation-form {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #evaluation-form h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  #name-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #name-section div {
+    flex: 1 1 50px;
+  }
+  
+  #name-section div input {
+    border: none;
+  }
+
+  .mid-container {
+    display: flex;
+    gap: 10px;
+  }
+
+  #info-house {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #info-house div {
+    width: 100%;
+  }
+  
+  #info-house div input {
+    border: none;
+  }
+  
+  #info-house select {
+    border: none;
+  }
+
+  #family-section {
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  #tech-section {
+    width: 50%;
+  }
+
+  #techs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .form-check {
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px !important;
+    gap: 10px;
+    min-width: 130px;
+  }
+  
+  .form-check input {
+    margin: 0 !important;
+  }
+
+  #section-rate {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #section-rate input {
+    margin-left: 0.6rem;
+  }
+
+  #label-rate {
+    width: 40%;
+  }
+
+  #rates {
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    height: 175px;
+  }
+
+  #form-data p {
+    padding: 10px 0;
+  }
+
+  #rates div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  #section-comments {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 10px;
+  }
+
+  #textarea {
+    height: calc(10rem + 2px) !important;
+    border: none;
+  }
+
+  #confirm-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 10px;
+  }
+
+  #label-infos {
+    width: 200px;
+  }
+
+  #submit-btn {
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    padding: 0.4rem;
+  }
+  
+  #form-data {
+    order: -1;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  #form-data p {
+    padding: 10px 0;
+  }  
+
+  #section-logo {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 10;
+    max-width: 700px;
+  }
+  
+  #trybewarts-forms-logo {
+    width: 80%;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: rgb(8, 9, 9);
+    padding: 5px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  #counter {
+    text-align: end;
+    position: relative;
+    top: -25px;
+    right: 8px;
+    color: rgb(153, 151, 151);
+  }
+  
+  .error-container {
+    display: none;
+    border: 1.5px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .hidden-error {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+    color: rgb(143, 71, 71);
+  }
+}
+
+@media screen and (min-width: 490px) {
+  * {
+    font-size: large;
+  }
+
+  hr {
+    margin-top: 0 !important;
+  }
+
+  .trybewarts-login {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .trybewarts-login .form-floating{
+    width: 48%;
+  }
+
+  #name-section {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #info-house {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #family-section {
+    width: 40%;
+  }
+
+  #tech-section {
+    width: 60%;
+  }
+
+  #rates {
+    flex-direction: row;
+    width: 285px;
+    height: auto;
+  }
+
+  #rates div {
+    width: 50px;
+  }
+
+  #label-infos {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #rates {
+    height: auto;
+  }
+
+  #rates div {
+    width: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #trybewarts-objects {
+    justify-content: space-between;
+    margin: 0;
+    flex: 1 1;
+    max-width: 54%;
   }
 
   .trybewarts-login {
     flex-direction: row;
-    width: 100%;
-  }
-  
-  main {
-    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px;
+    flex: 2 2;
+    max-width: 750px;
   }
 
-  #section-logo {
-    justify-content: center;
+  .trybewarts-login .form-floating{
+    max-width: 300px;
+    width: 35%;
+    flex: 1 1;
   }
 
   #evaluation-form {
-    width: 100%;
+    width: 675px;
+
+  }
+
+  #label-rate {
+    width: 30%;
+  }
+
+  #rates {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 70%;
+  }
+
+  #rates div {
+    width: auto;
   }
 
   #form-data {
-    width: 100%;
+    width: 675px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    flex-direction: row;
+    justify-content: space-between !important;
   }
 }

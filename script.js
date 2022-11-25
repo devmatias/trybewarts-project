@@ -141,22 +141,17 @@ const changeInputType = (type, input) => {
   switch (type) {
     case "text":
       return !input.value || input.value.length > 50;
-      break;
     case "email":
       return (
         !input.value || !input.value.includes("@") || input.value.length > 50
       );
-      break;
     case "select":
       return input.value === "Escolha uma casa";
-      break;
     case "checkbox":
     case "radio":
       return filterBox(input);
-      break;
     case "textarea":
       return !input.value || input.value.length > 500;
-      break;
     default:
       return console.log("type inválido");
   }
